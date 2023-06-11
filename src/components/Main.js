@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import LogoComponent from '../subComponents/LogoComponent';
 import { Endless } from './AllSvgs';
+import SocialIcons from '../subComponents/SocialIcons'
 import Intro from './Intro';
 
 
@@ -77,7 +78,7 @@ align-items: center;
 transition: all 1s ease;
 
 &>:first-child{
-    animation: ${rotate} infinite 1.5s linear;
+    animation: ${rotate} infinite 3.1s linear;
 }
 
 &>:last-child{
@@ -89,7 +90,7 @@ transition: all 1s ease;
 const DarkDiv = styled.div`
 position: absolute;
 top: 0;
-background-color: #000;
+background-color: #fff;
 bottom: 0;
 right: 50%;
 width: ${props => props.click ? '50%' : '0%'};
@@ -111,6 +112,7 @@ const Main = () => {
             <Container>
            
             <LogoComponent theme={click ? 'dark' :'light'}/>
+            <SocialIcons theme={click ? 'dark' :'light'} />
             <Center click={click}>
                 <Endless  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
                 <span>Tap</span>
