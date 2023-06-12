@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-//import { DarkTheme } from '../components/Themes'
+import { DarkTheme } from '../components/Themes'
 
 
 
 
 const Logo = styled.h1`
 display: inline-block;
-color: #000;
+color: {${props => props.color === 'dark' ? DarkTheme.text : DarkTheme.body};}
 
 font-family: system-ui;
 

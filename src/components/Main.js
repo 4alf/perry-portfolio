@@ -115,10 +115,10 @@ const Main = () => {
             <SocialIcons theme={click ? 'dark' :'light'} />
             <Center click={click}>
                 <Endless  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                <span>Tap</span>
+                <span></span>
             </Center>
 
-            <Contact target="_blank" href="mailto:codebucks27@gmail.com">
+            <Contact target="_blank" href="mailto:perryamos@gmail.com">
                 <motion.h2
                 initial={{
                     y:-200,
