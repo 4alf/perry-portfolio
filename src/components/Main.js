@@ -4,9 +4,10 @@ import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import LogoComponent from '../subComponents/LogoComponent';
 import { Endless } from './AllSvgs';
+//import HomeButton from '../subComponents/HomeButton';
 import SocialIcons from '../subComponents/SocialIcons'
 import Intro from './Intro';
-
+//import Date from '../subComponents/Date'
 
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
@@ -78,7 +79,7 @@ align-items: center;
 transition: all 1s ease;
 
 &>:first-child{
-    animation: ${rotate} infinite 3.1s linear;
+    animation: ${rotate} infinite 10.1s linear;
 }
 
 &>:last-child{
@@ -110,11 +111,11 @@ const Main = () => {
         <MainContainer>
          <DarkDiv   click={click}/>
             <Container>
-           
+            
             <LogoComponent theme={click ? 'dark' :'light'}/>
             <SocialIcons theme={click ? 'dark' :'light'} />
             <Center click={click}>
-                <Endless  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+                <Endless  onClick={()=> handleClick()} width={click ? 120 : 150} height={click ? 120 : 150} fill='currentColor' />
                 <span></span>
             </Center>
 
@@ -132,7 +133,7 @@ const Main = () => {
                 whileTap={{scale: 0.9}}
                 
                 >
-                    Say hi..
+                    📨
                 </motion.h2>
             </Contact>
            
