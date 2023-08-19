@@ -6,6 +6,7 @@ import GlobalStyle from "./globalStyles";
 
 
 import Main from "./components/Main";
+import AboutPage from "./components/AboutPage";
 //import AboutPage from "./components/AboutPage";
 
 
@@ -26,8 +27,8 @@ function App() {
             
 
             <Route path="/" element={<Main />} />
-
-            <Route path="*" element={<Main />} />
+            <Route path="/about" element={<AboutPage />}/>
+            <Route path="*" element={<Main />}/>
           </Routes>
         </AnimatePresence>
       </ThemeProvider>
