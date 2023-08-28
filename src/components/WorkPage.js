@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
-
+import { Endless } from './AllSvgs';
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
-
+import BigTits from '../subComponents/BigTits';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -39,7 +39,19 @@ const Rotate = styled.span`
   z-index: 1;
 `;
 
-
+// Framer-motion Configuration
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+  
+      transition: {
+        staggerChildren: 0.5,
+        duration: 0.5,
+      },
+    },
+  };
+  
 const WorkPage = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
@@ -73,10 +85,10 @@ const WorkPage = () => {
           ))}
         </Main>
         <Rotate ref={yinyang}>
-          <YinYang width={80} height={80} fill={DarkTheme.text} />
+          <Endless width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 
-        <BigTitlte text="WORK" top="10%" right="20%" />
+        <BigTits text="WORK" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
   );
