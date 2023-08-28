@@ -1,0 +1,100 @@
+[debug] [2023-06-13T21:28:23.359Z] ----------------------------------------------------------------------
+[debug] [2023-06-13T21:28:23.363Z] Command:       /usr/local/Cellar/node@14/14.21.2_1/libexec/node /usr/local/bin/firebase deploy
+[debug] [2023-06-13T21:28:23.364Z] CLI Version:   11.15.0
+[debug] [2023-06-13T21:28:23.364Z] Platform:      darwin
+[debug] [2023-06-13T21:28:23.365Z] Node Version:  v14.21.2
+[debug] [2023-06-13T21:28:23.366Z] Time:          Tue Jun 13 2023 22:28:23 GMT+0100 (West Africa Standard Time)
+[debug] [2023-06-13T21:28:23.367Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-13T21:28:23.454Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-13T21:28:23.454Z] > authorizing via signed-in user (oluwaseunolubiyione@gmail.com)
+[debug] [2023-06-13T21:28:23.454Z] [iam] checking project perryamoss for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-13T21:28:23.457Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/perryamoss:testIamPermissions [none]
+[debug] [2023-06-13T21:28:23.457Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/perryamoss:testIamPermissions x-goog-quota-user=projects/perryamoss
+[debug] [2023-06-13T21:28:23.457Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/perryamoss:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-13T21:28:24.897Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/perryamoss:testIamPermissions 200
+[debug] [2023-06-13T21:28:24.898Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/perryamoss:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-13T21:28:24.900Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/perryamoss [none]
+[debug] [2023-06-13T21:28:25.551Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/perryamoss 200
+[debug] [2023-06-13T21:28:25.551Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/perryamoss {"projectId":"perryamoss","projectNumber":"376813288194","displayName":"perryamos","name":"projects/perryamoss","resources":{"hostingSite":"perryamoss"},"state":"ACTIVE","etag":"1_a06024a3-4bdb-4765-8f11-a185552c9cd4"}
+[info] 
+[info] === Deploying to 'perryamoss'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-06-13T21:28:25.556Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/versions [none]
+[debug] [2023-06-13T21:28:25.556Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-13T21:28:27.154Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/versions 200
+[debug] [2023-06-13T21:28:27.155Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/versions {"name":"projects/376813288194/sites/perryamoss/versions/234e482327163910","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[perryamoss]: beginning deploy... 
+[info] i  hosting[perryamoss]: found 14 files in build 
+[debug] [2023-06-13T21:28:27.170Z] [hosting] uploading with 200 concurrency
+[debug] [2023-06-13T21:28:27.570Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2023-06-13T21:28:27.570Z] [hosting][hash queue][FINAL] {"max":389,"min":21,"avg":69.57142857142857,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":395}
+[debug] [2023-06-13T21:28:27.571Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/376813288194/sites/perryamoss/versions/234e482327163910:populateFiles [none]
+[debug] [2023-06-13T21:28:27.571Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/376813288194/sites/perryamoss/versions/234e482327163910:populateFiles {"files":{"/asset-manifest.json":"8616f8a4835229fe894c3758ea3944d51f67a347216ed4a94a5257ed4ff07587","/index.html":"03e7271618e680b5d5ad11264e5791345df8a65b6145a749b50c2accb1f9468c","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/css/main.fbfcb162.css":"3a75f4decbc1219e1c51c27a9e665e5d997c3abb15ff3dd8478117e3abbf5a0c","/static/css/main.fbfcb162.css.map":"ae7e1dbc03e9fd886e7abe1c32e33e0e0222d5e4f4ce13f8be2ace03042c9728","/static/js/main.503c4464.js.LICENSE.txt":"908b77634c5289500bc8a4aa7b72058398be7066af5756269872b62fa4a1e8ff","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/static/js/main.503c4464.js":"f25c36c5addc8d6e992f3821609305e078f66f6ade0c2b7c70d674fbd2dedb7f","/static/media/perz-port.784dd8b72e9ad8fe6f12.png":"602ae8bd2218e23d57ef2c28923242ac9f35a453025eccdbaea8807f73f1c403","/static/media/spaceman.240fa6e7e1df2a576eeb.png":"c8ff5651f31f833ec581493f3ccf906e85f1fa4d330498007d99a923c55ff444","/static/js/main.503c4464.js.map":"a91fbc934657498fcc2a35b19525fc6b58f5f9dc6325ef22aceb2b3002b96f08"}}
+[debug] [2023-06-13T21:28:28.724Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/376813288194/sites/perryamoss/versions/234e482327163910:populateFiles 200
+[debug] [2023-06-13T21:28:28.724Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/376813288194/sites/perryamoss/versions/234e482327163910:populateFiles {"uploadRequiredHashes":["a91fbc934657498fcc2a35b19525fc6b58f5f9dc6325ef22aceb2b3002b96f08","03e7271618e680b5d5ad11264e5791345df8a65b6145a749b50c2accb1f9468c","8616f8a4835229fe894c3758ea3944d51f67a347216ed4a94a5257ed4ff07587","c8ff5651f31f833ec581493f3ccf906e85f1fa4d330498007d99a923c55ff444","f25c36c5addc8d6e992f3821609305e078f66f6ade0c2b7c70d674fbd2dedb7f"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files"}
+[debug] [2023-06-13T21:28:28.726Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/a91fbc934657498fcc2a35b19525fc6b58f5f9dc6325ef22aceb2b3002b96f08 [none]
+[debug] [2023-06-13T21:28:28.726Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/a91fbc934657498fcc2a35b19525fc6b58f5f9dc6325ef22aceb2b3002b96f08 [stream]
+[debug] [2023-06-13T21:28:28.727Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/03e7271618e680b5d5ad11264e5791345df8a65b6145a749b50c2accb1f9468c [none]
+[debug] [2023-06-13T21:28:28.728Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/03e7271618e680b5d5ad11264e5791345df8a65b6145a749b50c2accb1f9468c [stream]
+[debug] [2023-06-13T21:28:28.729Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/8616f8a4835229fe894c3758ea3944d51f67a347216ed4a94a5257ed4ff07587 [none]
+[debug] [2023-06-13T21:28:28.729Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/8616f8a4835229fe894c3758ea3944d51f67a347216ed4a94a5257ed4ff07587 [stream]
+[debug] [2023-06-13T21:28:28.730Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/c8ff5651f31f833ec581493f3ccf906e85f1fa4d330498007d99a923c55ff444 [none]
+[debug] [2023-06-13T21:28:28.730Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/c8ff5651f31f833ec581493f3ccf906e85f1fa4d330498007d99a923c55ff444 [stream]
+[debug] [2023-06-13T21:28:28.732Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/f25c36c5addc8d6e992f3821609305e078f66f6ade0c2b7c70d674fbd2dedb7f [none]
+[debug] [2023-06-13T21:28:28.732Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/f25c36c5addc8d6e992f3821609305e078f66f6ade0c2b7c70d674fbd2dedb7f [stream]
+[debug] [2023-06-13T21:28:28.734Z] [hosting][populate queue][FINAL] {"max":1157,"min":1157,"avg":1157,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1165}
+[debug] [2023-06-13T21:28:28.734Z] [hosting] uploads queued: 5
+[debug] [2023-06-13T21:28:30.261Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/03e7271618e680b5d5ad11264e5791345df8a65b6145a749b50c2accb1f9468c 200
+[debug] [2023-06-13T21:28:30.261Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/03e7271618e680b5d5ad11264e5791345df8a65b6145a749b50c2accb1f9468c [stream]
+[debug] [2023-06-13T21:28:30.421Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/8616f8a4835229fe894c3758ea3944d51f67a347216ed4a94a5257ed4ff07587 200
+[debug] [2023-06-13T21:28:30.421Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/8616f8a4835229fe894c3758ea3944d51f67a347216ed4a94a5257ed4ff07587 [stream]
+[debug] [2023-06-13T21:28:30.630Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/f25c36c5addc8d6e992f3821609305e078f66f6ade0c2b7c70d674fbd2dedb7f 200
+[debug] [2023-06-13T21:28:30.630Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/f25c36c5addc8d6e992f3821609305e078f66f6ade0c2b7c70d674fbd2dedb7f [stream]
+[debug] [2023-06-13T21:28:32.051Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/a91fbc934657498fcc2a35b19525fc6b58f5f9dc6325ef22aceb2b3002b96f08 200
+[debug] [2023-06-13T21:28:32.052Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/a91fbc934657498fcc2a35b19525fc6b58f5f9dc6325ef22aceb2b3002b96f08 [stream]
+[debug] [2023-06-13T21:28:32.164Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/c8ff5651f31f833ec581493f3ccf906e85f1fa4d330498007d99a923c55ff444 200
+[debug] [2023-06-13T21:28:32.165Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/perryamoss/versions/234e482327163910/files/c8ff5651f31f833ec581493f3ccf906e85f1fa4d330498007d99a923c55ff444 [stream]
+[debug] [2023-06-13T21:28:32.165Z] [hosting][upload queue][FINAL] {"max":3440,"min":1537,"avg":2381,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":3440}
+[info] ✔  hosting[perryamoss]: file upload complete 
+[debug] [2023-06-13T21:28:32.168Z] [hosting] deploy completed after 5010ms
+[debug] [2023-06-13T21:28:32.173Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "perryamoss"
+    },
+    "version": "projects/376813288194/sites/perryamoss/versions/234e482327163910"
+  }
+]
+[info] i  hosting[perryamoss]: finalizing version... 
+[debug] [2023-06-13T21:28:32.177Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/versions/234e482327163910 updateMask=status%2Cconfig
+[debug] [2023-06-13T21:28:32.178Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/versions/234e482327163910 {"status":"FINALIZED","config":{}}
+[debug] [2023-06-13T21:28:33.273Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/versions/234e482327163910 200
+[debug] [2023-06-13T21:28:33.273Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/versions/234e482327163910 {"name":"projects/376813288194/sites/perryamoss/versions/234e482327163910","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-13T21:28:27.099204Z","createUser":{"email":"oluwaseunolubiyione@gmail.com"},"finalizeTime":"2023-06-13T21:28:33.528177Z","finalizeUser":{"email":"oluwaseunolubiyione@gmail.com"}}
+[debug] [2023-06-13T21:28:33.273Z] [hosting] finalized version for perryamoss:[object Object]
+[info] ✔  hosting[perryamoss]: version finalized 
+[info] i  hosting[perryamoss]: releasing new version... 
+[debug] [2023-06-13T21:28:33.275Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/channels/live/releases versionName=projects%2F376813288194%2Fsites%2Fperryamoss%2Fversions%2F234e482327163910
+[debug] [2023-06-13T21:28:33.276Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/channels/live/releases {}
+[debug] [2023-06-13T21:28:34.462Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/channels/live/releases 200
+[debug] [2023-06-13T21:28:34.463Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/perryamoss/channels/live/releases {"name":"projects/376813288194/sites/perryamoss/channels/live/releases/1686691714162000","version":{"name":"projects/376813288194/sites/perryamoss/versions/234e482327163910","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-13T21:28:27.099204Z","createUser":{"email":"oluwaseunolubiyione@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtfRq5fF-qClu44oUhbH1I5LBLiposfKb1J4WN3t"},"finalizeTime":"2023-06-13T21:28:33.528177Z","finalizeUser":{"email":"oluwaseunolubiyione@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtfRq5fF-qClu44oUhbH1I5LBLiposfKb1J4WN3t"}},"type":"DEPLOY","releaseTime":"2023-06-13T21:28:34.162Z","releaseUser":{"email":"oluwaseunolubiyione@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtfRq5fF-qClu44oUhbH1I5LBLiposfKb1J4WN3t"}}
+[debug] [2023-06-13T21:28:34.463Z] [hosting] release: {"name":"projects/376813288194/sites/perryamoss/channels/live/releases/1686691714162000","version":{"name":"projects/376813288194/sites/perryamoss/versions/234e482327163910","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-13T21:28:27.099204Z","createUser":{"email":"oluwaseunolubiyione@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtfRq5fF-qClu44oUhbH1I5LBLiposfKb1J4WN3t"},"finalizeTime":"2023-06-13T21:28:33.528177Z","finalizeUser":{"email":"oluwaseunolubiyione@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtfRq5fF-qClu44oUhbH1I5LBLiposfKb1J4WN3t"}},"type":"DEPLOY","releaseTime":"2023-06-13T21:28:34.162Z","releaseUser":{"email":"oluwaseunolubiyione@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtfRq5fF-qClu44oUhbH1I5LBLiposfKb1J4WN3t"}}
+[info] ✔  hosting[perryamoss]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/perryamoss/overview
+[info] Hosting URL: https://perryamoss.web.app
+[debug] [2023-06-13T21:28:40.421Z] Error: Timed out.
+    at Timeout.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[error] 
+[error] Error: An unexpected error has occurred.

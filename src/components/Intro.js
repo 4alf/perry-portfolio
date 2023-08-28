@@ -4,22 +4,14 @@ import {motion} from 'framer-motion';
 import Me from '../assets/Images/perz-port.png';
 
 
-
-
-
-
 const Box = styled(motion.div)`
-
 position: absolute;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
-
-
 width: 65vw;
 height:55vh;
 display: flex;
-
 
 background: linear-gradient(
     to right,
@@ -44,21 +36,19 @@ position: relative;
 display: flex;
 
 
-@media (max-width: 900px) {
-    .pic{
-        
-        top: 30%;
-    }
-}
-
 .pic{
     position: absolute;
-    
     bottom: 0;
     left: 50%;
     transform: translate(-50%,0%);
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 900px) {
+    .pic{
+        top: 30%;
+    }
 }
 `
 
@@ -68,7 +58,8 @@ color: ${props => props.theme};
 padding: 2rem;
 cursor: pointer;
 span {
-    font-size: 3rem;
+    opacity: 70%;
+    font-size: 1.7rem;
     color: blue;
 }
 @media (max-width: 425px) {
@@ -82,12 +73,10 @@ justify-content: space-evenly;
 
 &>*:last-child{
     color: ${props => `rgba(${props.theme},0.6)` };
-    font-size: calc(0.5rem + 1.5vw);
-    font-weight:300;
+    font-size: calc(0.6rem + 1.5vw);
+    font-weight:350;
     
 }
-
-
 
 `
 
@@ -95,12 +84,12 @@ const Intro = () => {
     return (
         <Box
         initial={{height:0}}
-        animate={{height: '20vh'}}
+        animate={{height: '25vh'}}
         transition={{ type: 'spring', duration:2, delay:1 }}
         >
             <SubBox>
                 <Text>
-                    <h1>Hi 👋🏻</h1>
+                    <h1>Hi 😎</h1>
                     <h3>I'm <span>perry</span></h3>
                     <h6>I'm a ui/ux designer with a knack for desing and attention for details.</h6>
                 </Text>

@@ -5,6 +5,8 @@ import { Anchor, Link } from '../components/AllSvgs'
 
 const AnchorComponent = (props) => {
 
+    const reff= useRef(null);
+    const hiddenRef =useRef(null)
 
     return (
         <Container>

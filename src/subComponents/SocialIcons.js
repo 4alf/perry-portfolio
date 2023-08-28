@@ -39,12 +39,12 @@ const SocialIcons = (props) => {
         <a
           
           style={{ color: "inherit" }}
-          href={"https://github.com/codebucks27"}
+          href={"https://github.com/4alf"}
         >
           <Behance
             width={25}
             height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+            fill={props.theme === "dark" ? DarkTheme.Text : DarkTheme.body}
           />
         </a>
       </motion.div>
@@ -56,18 +56,18 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           
-          href={"https://twitter.com/code_bucks"}
+          href={"https://twitter.com/"}
         >
           <Twitter
             width={25}
             height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+            fill={props.theme === "dark" ? DarkTheme.Text : DarkTheme.body}
           />
         </a>
       </motion.div>
 
       <Line
-        color={props.theme}
+        color={props.theme ==="dark" ? DarkTheme.Text : DarkTheme.body}
         initial={{
           height: 0,
         }}
