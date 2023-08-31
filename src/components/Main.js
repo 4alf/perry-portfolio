@@ -6,7 +6,8 @@ import LogoComponent from '../subComponents/LogoComponent';
 import { Endless } from './AllSvgs';
 //import HomeButton from '../subComponents/HomeButton';
 import SocialIcons from '../subComponents/SocialIcons'
-import Intro from './Intro';
+import Intro from '../components/Intro';
+import HomeButton from '../subComponents/HomeButton';
 //import Date from '../subComponents/Date'
 
 const MainContainer = styled.div`
@@ -99,7 +100,21 @@ height: ${props => props.click ? '100%' : '0%'};
 z-index:1;
 transition: height 0.5s ease, width 1s ease 0.5s;
 `
+const WORK = styled(NavLink)`
+color: ${props => props.click ? props.theme.body : props.theme.text};
 
+position: absolute;
+top: 50%;
+left: calc(1rem + 2vw);
+transform: translate(-50%, -50%) rotate(-90deg) ;
+text-decoration: none;
+z-index:1;
+`
+const SKILLS = styled(NavLink)`
+color: ${props => props.theme.text};
+text-decoration: none;
+z-index:1;
+`
 
 const Main = () => {
 
@@ -111,7 +126,7 @@ const Main = () => {
         <MainContainer>
          <DarkDiv   click={click}/>
             <Container>
-            
+            <HomeButton />
             <LogoComponent theme={click ? 'dark' :'light'}/>
             <SocialIcons theme={click ? 'dark' :'light'} />
             <Center click={click}>
@@ -136,8 +151,22 @@ const Main = () => {
                     📨
                 </motion.h2>
             </Contact>
-           
-            
+            <WORK to="/work" click={+click}>
+                <motion.h2
+                initial={{
+                    y:-200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    Work
+                </motion.h2>
+            </WORK>
             <BottomBar>
             <ABOUT to="/about" click={+click}>
                 <motion.h2
@@ -155,8 +184,22 @@ const Main = () => {
                     About.
                 </motion.h2>
             </ABOUT>
-           
-
+            <SKILLS to="/skills">
+                <motion.h2
+                initial={{
+                    y:200,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                animate={{
+                    y:0,
+                    transition: { type:'spring', duration: 1.5, delay:1}
+                }}
+                 whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    My Skills.
+                </motion.h2>
+            </SKILLS>
             </BottomBar>
 
             </Container>

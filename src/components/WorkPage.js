@@ -6,10 +6,11 @@ import { motion } from "framer-motion";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
-import { Endless } from './AllSvgs';
+
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
-import BigTits from '../subComponents/BigTits';
+import { Endless } from "./AllSvgs";
+import BigTits from "../subComponents/BigTits";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -41,20 +42,20 @@ const Rotate = styled.span`
 
 // Framer-motion Configuration
 const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-  
-      transition: {
-        staggerChildren: 0.5,
-        duration: 0.5,
-      },
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
     },
-  };
-  
+  },
+};
+
 const WorkPage = () => {
   const ref = useRef(null);
-  const yinyang = useRef(null);
+  const Endless = useRef(null);
 
   useEffect(() => {
     let element = ref.current;
@@ -62,7 +63,7 @@ const WorkPage = () => {
     const rotate = () => {
       element.style.transform = `translateX(${-window.pageYOffset}px)`;
 
-      return (yinyang.current.style.transform =
+      return (Endless.current.style.transform =
         "rotate(" + -window.pageYOffset + "deg)");
     };
 
@@ -84,7 +85,7 @@ const WorkPage = () => {
             <Card key={d.id} data={d} />
           ))}
         </Main>
-        <Rotate ref={yinyang}>
+        <Rotate ref={Endless}>
           <Endless width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 

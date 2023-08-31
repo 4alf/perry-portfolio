@@ -6,9 +6,9 @@ import { Design, Develope} from './AllSvgs';
 
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
-import PowerButton from '../subComponents/PowerButton';
-import ParticleComponent from '../subComponents/ParticleComponent';
-import BigTitle from '../subComponents/BigTitlte'
+import HomeButton from '../subComponents/HomeButton';
+
+import BigTits from '../subComponents/BigTits'
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -89,11 +89,11 @@ const MySkillsPage = () => {
 
 <LogoComponent theme='light'/>
 <SocialIcons theme='light'/>
-<PowerButton />
-<ParticleComponent theme='light' />
+<HomeButton />
+
             <Main>
 <Title>
-    <Design width={40} height={40} /> Designer
+    
 </Title>
 <Description>
 I love to create design which speaks, Keep it clean, minimal and simple.
@@ -142,7 +142,7 @@ VScode, Github, Codepen etc.
 
             </Main>
 
-            <BigTitle text="SKILLS" top="80%" right="30%" />
+            <BigTits text="SKILLS" top="80%" right="30%" />
 
         </Box>
 
